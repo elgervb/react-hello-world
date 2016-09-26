@@ -40,13 +40,13 @@ module.exports = (config) => {
 
         webpack: {
             babel: {
-                presets: ['es2015', 'stage-0'],
+                presets: ['es2015', 'stage-0', 'react'],
             },
             isparta: {
                 embedSource: true,
                 noAutoWrap: true,
                 babel: {
-                    presets: ['es2015', 'stage-0'],
+                    presets: ['es2015', 'stage-0', 'react'],
                 },
             },
             devtool: 'source-map',

@@ -16,9 +16,9 @@ export default () => ({
     entry: [
         'babel-polyfill',
         path.join(source, 'scss', 'main.scss'),
-        path.join(source, 'js', 'main.js'),
+        path.join(source, 'js', 'main.jsx'),
         path.join(source, 'index.html'),
-    ],
+    ], 
 
     module: {
         preLoaders: [
@@ -41,7 +41,12 @@ export default () => ({
             {
                 test: /\.js$/,
                 exclude: [/node_modules/],
-                loader: 'babel',
+                loader: 'babel?cacheDirectory',
+            },
+            {
+                test: /\.jsx$/,
+                exclude: [/node_modules/],
+                loader: 'babel?cacheDirectory',
             },
             {
                 test: /\.html$/, 
