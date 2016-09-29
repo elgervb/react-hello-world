@@ -2,13 +2,7 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import CommentBox from './components/commentbox.jsx';
 
-// comment data
-const data = [
-    {id: 1, author: "Pete Hunt", text: "This is one comment"},
-    {id: 2, author: "Jordan Walke", text: "This is *another* comment"}
-];
-
 ReactDOM.render(
-    <CommentBox data={data} />,
+    <CommentBox url="/js/data/comments.json" pollInterval={2000} />,
     document.getElementById('content')
 );
