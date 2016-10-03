@@ -10,8 +10,8 @@ export default class Comment extends React.Component {
 
     render() {
         return (
-            <div className="comment">
-                <h2 className="commentAuthor">
+            <div className='comment'>
+                <h2 className='commentAuthor'>
                     {this.props.author}
                 </h2>
                 <span dangerouslySetInnerHTML={this.rawMarkup()} />
@@ -19,3 +19,8 @@ export default class Comment extends React.Component {
         );
     }
 }
+
+Comment.propTypes = {
+    children: React.PropTypes.element,
+    author: React.PropTypes.string,
+};
